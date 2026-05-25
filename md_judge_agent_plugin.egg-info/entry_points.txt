@@ -1,0 +1,2 @@
+[console_scripts]
+md-judge-agent = md_judge_agent_plugin.cli:main

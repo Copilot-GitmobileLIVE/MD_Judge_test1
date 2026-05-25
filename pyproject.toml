@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "md-judge-agent-plugin"
+version = "0.1.0"
+description = "Installable wrapper for the MD_Judge custom agent definition."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.scripts]
+md-judge-agent = "md_judge_agent_plugin.cli:main"
+
+[tool.setuptools]
+include-package-data = true
+
+[tool.setuptools.packages.find]
+include = ["md_judge_agent_plugin*"]
+
+[tool.setuptools.package-data]
+md_judge_agent_plugin = ["agents/*.md"]

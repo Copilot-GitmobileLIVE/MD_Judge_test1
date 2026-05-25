@@ -1,0 +1,80 @@
+# MD_Judge Agent Plugin
+
+This project packages `MD_Judge`, a custom LLM judge agent for evaluating `MD_Test`.
+
+The bundled judge agent is designed to:
+
+- collaborate with `MD_Test` when the host platform supports custom-agent delegation
+- evaluate `MD_Test` outputs against the user's request
+- score the evaluated agent on a 0-10 rubric
+- save scoring artifacts in a folder named `<evaluated_agent_name>_YYYYMMDD_HHMMSS_scoring`
+
+The Python package can also scaffold that scoring folder structure directly.
+
+## Install
+
+```powershell
+pip install -e .
+```
+
+## Commands
+
+Show the bundled agent definition:
+
+```powershell
+md-judge-agent show
+```
+
+Install the agent into another workspace:
+
+```powershell
+md-judge-agent install --target-dir C:\path\to\other-workspace
+```
+
+Export the raw agent file anywhere:
+
+```powershell
+md-judge-agent export --output C:\temp\MD_Judge.agent.md
+```
+
+Create a timestamped scoring folder for an evaluated agent:
+
+```powershell
+md-judge-agent init-score --evaluated-agent-name MD_Test --output-root C:\temp
+```
+
+Overwrite an existing installed or generated output:
+
+```powershell
+md-judge-agent install --target-dir C:\path\to\other-workspace --force
+md-judge-agent init-score --evaluated-agent-name MD_Test --output-root C:\temp --force
+```
+
+## What gets installed
+
+The installer writes:
+
+```text
+.github\agents\MD_Judge.agent.md
+```
+
+inside the target workspace.
+
+## Scoring bundle layout
+
+The scoring helper creates:
+
+```text
+<output-root>\<evaluated_agent_name>_YYYYMMDD_HHMMSS_scoring\
+```
+
+with these files:
+
+- `manifest.json`
+- `scoring_summary.json`
+- `scoring_notes.md`
+
+## Notes
+
+This package ships the judge agent in the VS Code custom agent format. The agent definition instructs the host to collaborate with `MD_Test` when that environment supports inter-agent execution. The Python CLI focuses on packaging and scoring-artifact scaffolding.
+# MD_Judge_test1
