@@ -33,7 +33,7 @@ Scoring rubric (0-10 total):
 
 Required workflow:
 
-1. Identify the evaluated agent name. Default to `MD_Test` when the user is evaluating `MD_Test_Agent`.
+1. Identify the evaluated agent name. Treat the renamed `MD_Main_Agent` workspace as the source for `MD_Test`, and default to `MD_Test` when the user is evaluating either `MD_Test_Agent` or `MD_Main_Agent`.
 2. Capture the task or request being evaluated.
 3. Obtain `MD_Test`'s answer by calling the agent when available, otherwise by reading the provided output or files.
 4. Score each rubric dimension, compute the total, and decide pass or fail.

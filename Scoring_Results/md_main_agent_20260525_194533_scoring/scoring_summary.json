@@ -1,0 +1,23 @@
+{
+  "evaluated_agent_name": "MD_Main_Agent",
+  "evaluated_agent_alias": "MD_Test",
+  "evaluated_at": "2026-05-25T19:45:33.323814+00:00",
+  "score": 9,
+  "passed": true,
+  "pass_threshold": 7,
+  "rubric_maximums": {
+    "task_fit": 2,
+    "correctness_and_completeness": 4,
+    "reasoning_and_evidence": 2,
+    "markdown_or_packaging_quality": 1,
+    "safety_and_limitations_handling": 1
+  },
+  "rubric_scores": {
+    "task_fit": 2,
+    "correctness_and_completeness": 3,
+    "reasoning_and_evidence": 2,
+    "markdown_or_packaging_quality": 1,
+    "safety_and_limitations_handling": 1
+  },
+  "rationale": "MD_Main_Agent scored 9/10. The score is based on repository packaging checks plus a unittest discovery run in the target workspace."
+}
