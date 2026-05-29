@@ -1,0 +1,23 @@
+{
+  "evaluated_agent_name": "MD_Test",
+  "evaluated_agent_alias": "MD_Test",
+  "evaluated_at": "2026-05-29T16:31:43.283572+00:00",
+  "score": 2,
+  "passed": false,
+  "pass_threshold": 7,
+  "rubric_maximums": {
+    "task_fit": 2,
+    "correctness_and_completeness": 4,
+    "reasoning_and_evidence": 2,
+    "markdown_or_packaging_quality": 1,
+    "safety_and_limitations_handling": 1
+  },
+  "rubric_scores": {
+    "task_fit": 1,
+    "correctness_and_completeness": 0,
+    "reasoning_and_evidence": 0,
+    "markdown_or_packaging_quality": 0,
+    "safety_and_limitations_handling": 1
+  },
+  "rationale": "MD_Test was not directly invokable in this environment and no task-specific MD_Test output artifacts were provided, so scoring is evidence-limited and results in a fail."
+}
